@@ -67,6 +67,15 @@ nav a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.hero-image {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
 footer {
   background-color: #3e4a3f;
   color: white;
