@@ -1,3 +1,4 @@
+/* Base styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Header & Navigation */
 header {
   background-color: #3e4a3f;
   color: white;
@@ -16,24 +18,31 @@ header {
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 10px 0 0;
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 10px;
 }
 
 nav a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  transition: color 0.2s;
 }
 
+nav a:hover {
+  color: #fff785;
+}
+
+/* Layout Container */
 .section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
+/* Intro & About Sections */
 .intro, .about-chef {
   text-align: center;
   margin-bottom: 50px;
@@ -51,38 +60,61 @@ nav a {
   line-height: 1.6;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Hero image (homepage portrait) */
 .hero-image {
-  max-width: 600px;
   width: 100%;
+  max-width: 500px;
   height: auto;
   display: block;
-  margin: 20px auto;
-  border-radius: 10px;
+  margin: 30px auto;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Masonry gallery */
+.masonry-gallery {
+  column-count: 3;
+  column-gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.masonry-gallery img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  break-inside: avoid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+
+/* Footer */
 footer {
   background-color: #3e4a3f;
   color: white;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+  font-size: 0.95em;
 }
 
 footer a {
   color: #fff785;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
