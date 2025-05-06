@@ -24,6 +24,49 @@ header img.logo {
   border-radius: 8px;
 }
 
+/* Logo + Title layout */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.site-name {
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
+/* Header & Logo */
+header {
+  background-color: #3e4a3f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.site-logo {
+  max-height: 70px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.site-name {
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -100,21 +143,6 @@ main {
   font-size: 1.2em;
   font-weight: bold;
 }
-
-/* Logo + Title layout */
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.site-name {
-  font-size: 1.8em;
-  color: white;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
 
 /* Responsive masonry columns */
 @media (max-width: 900px) {
