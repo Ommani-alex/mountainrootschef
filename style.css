@@ -114,6 +114,11 @@ nav a:hover {
   padding-top: 10px;
 }
 
+.logo-wrapper {
+  padding: 10px 0;
+}
+
+
 /* Responsive masonry columns */
 @media (max-width: 900px) {
   .masonry-gallery {
