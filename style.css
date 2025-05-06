@@ -101,6 +101,21 @@ main {
   font-weight: bold;
 }
 
+/* Logo + Title layout */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.site-name {
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
 /* Responsive masonry columns */
 @media (max-width: 900px) {
   .masonry-gallery {
