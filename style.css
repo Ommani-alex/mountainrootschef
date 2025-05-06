@@ -1,128 +1,102 @@
-/* Base styling */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
-  color: #333;
 }
 
-/* Header & Navigation */
-header {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Header */
+.site-header {
   background-color: #3e4a3f;
   color: white;
   padding: 20px;
   text-align: center;
 }
 
-nav ul {
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  margin-top: 10px;
+}
+
+.nav-links {
   list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-nav a {
-  text-decoration: none;
+.nav-links a {
   color: white;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: #fff785;
-}
-
-/* Layout Container */
-.section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* Intro & About Sections */
-.intro, .about-chef {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.intro h2, .about-chef h2 {
-  font-size: 2em;
-  color: #3e4a3f;
-}
-
-.intro p, .about-chef p {
-  font-size: 1.1em;
-  max-width: 700px;
-  margin: 10px auto;
-  line-height: 1.6;
-}
-
-/* Hero image (homepage portrait) */
-.hero-image {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  display: block;
-  margin: 30px auto;
-  border-radius: 12px;
-  object-fit: contain;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-/* Masonry gallery */
-.masonry-gallery {
-  column-count: 3;
-  column-gap: 1.5rem;
-  padding: 0 1rem;
-}
-
-.masonry-gallery img {
-  width: 100%;
-  display: block;
-  margin-bottom: 1.5rem;
-  border-radius: 10px;
-  break-inside: avoid;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Payment Button */
-.payment-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #3e4a3f;
-  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
-  transition: background-color 0.2s ease;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
-.payment-button:hover {
+.nav-links a:hover,
+.nav-links a.active {
   background-color: #2f3931;
 }
 
-.site-logo {
-  display: block;
-  max-width: 200px;
-  height: auto;
-  margin: 0 auto 10px;
-}
-/* Responsive masonry columns */
-@media (max-width: 900px) {
-  .masonry-gallery {
-    column-count: 2;
-  }
+/* Content Layout */
+.page-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-@media (max-width: 600px) {
-  .masonry-gallery {
-    column-count: 1;
-  }
+.intro-section,
+.about-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.intro-section h2,
+.about-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #3e4a3f;
+}
+
+.intro-section p,
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.1em;
+}
+
+.hero-image {
+  max-width: 400px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -131,9 +105,10 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 60px;
   font-size: 0.95em;
 }
+
 
 footer a {
   color: #fff785;
@@ -143,3 +118,16 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+}
+
