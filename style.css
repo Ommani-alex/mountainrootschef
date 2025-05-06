@@ -106,6 +106,14 @@ nav a:hover {
   background-color: #2f3931;
 }
 
+.site-logo {
+  display: block;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 10px;
+  padding-top: 10px;
+}
+
 /* Responsive masonry columns */
 @media (max-width: 900px) {
   .masonry-gallery {
