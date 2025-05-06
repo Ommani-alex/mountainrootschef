@@ -23,7 +23,11 @@ header img.logo {
   width: auto;
   border-radius: 8px;
 }
-
+.site-logo {
+      max-height: 60px;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
 /* Logo + Title layout */
 .logo-title {
   display: flex;
