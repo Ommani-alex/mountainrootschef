@@ -108,17 +108,10 @@ nav a:hover {
 
 .site-logo {
   display: block;
-  max-width: 220px;
+  max-width: 200px;
   height: auto;
   margin: 0 auto 10px;
-  padding-top: 10px;
 }
-
-.logo-wrapper {
-  padding: 10px 0;
-}
-
-
 /* Responsive masonry columns */
 @media (max-width: 900px) {
   .masonry-gallery {
