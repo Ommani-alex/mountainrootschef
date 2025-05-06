@@ -5,6 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Mountain Roots</title>
   <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .contact-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      color: #3e4a3f;
+    }
+
+    form label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: bold;
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    form button {
+      background-color: #3e4a3f;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    form button:hover {
+      background-color: #2f3931;
+    }
+
+    .social-links {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 1.4em;
+      color: #3e4a3f;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: #000;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,26 +78,55 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Booking</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="section">
-    <section class="contact-info" style="text-align: center;">
+    <div class="contact-container">
       <h2>Contact David</h2>
-      <p>
-        Email: <a href="mailto:davidbreeden87@gmail.com">davidbreeden87@gmail.com</a><br/>
-        Phone: <a href="tel:8287343968">(828) 734-3968</a><br/>
-        Facebook: <a href="https://www.facebook.com/profile.php?id=61563032924845" target="_blank">Mountain Roots on Facebook</a><br/>
-        TikTok: @chef_breeden<br/>
-        <strong>Located in Canton, NC</strong>
-      </p>
-    </section>
+      <form action="https://formspree.io/f/mvgaawry" method="POST">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="_replyto" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="service">What are you interested in?</label>
+        <select id="service" name="service">
+          <option value="">-- Select --</option>
+          <option value="private-chef">Private Chef Services</option>
+          <option value="event-catering">Event Catering</option>
+          <option value="baked-goods">Custom Baked Goods</option>
+          <option value="cooking-class">Cooking Classes</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="message">Tell me more about what you're looking for *</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="social-links">
+        <p>Or connect with me here:</p>
+        <a href="https://www.facebook.com/profile.php?id=61563032924845" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.tiktok.com/@chef_breeden" target="_blank" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 David Breeden | Mountain Roots</p>
+    <p>&copy; 2025 David Breeden | Mountain Roots Catering</p>
   </footer>
 </body>
 </html>
