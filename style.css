@@ -88,6 +88,7 @@ nav a:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Payment Button */
 .payment-button {
   display: inline-block;
   padding: 12px 24px;
@@ -97,6 +98,7 @@ nav a:hover {
   font-weight: bold;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
   transition: background-color 0.2s ease;
 }
 
@@ -104,6 +106,7 @@ nav a:hover {
   background-color: #2f3931;
 }
 
+/* Responsive masonry columns */
 @media (max-width: 900px) {
   .masonry-gallery {
     column-count: 2;
