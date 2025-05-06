@@ -101,6 +101,18 @@ main {
   font-weight: bold;
 }
 
+/* Responsive masonry columns */
+@media (max-width: 900px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
 /* Footer */
 footer {
   background-color: #3e4a3f;
