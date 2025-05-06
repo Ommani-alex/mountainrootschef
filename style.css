@@ -118,3 +118,18 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+.payment-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3e4a3f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.payment-button:hover {
+  background-color: #2f3931;
+}
