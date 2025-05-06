@@ -1,31 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Booking & Payment | Mountain Roots Catering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking | Mountain Roots Catering</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .booking-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+    }
+
+    .booking-container h2 {
+      text-align: center;
+      color: #3e4a3f;
+      margin-bottom: 30px;
+    }
+
+    .booking-section {
+      margin-bottom: 40px;
+    }
+
+    .pricing-tier {
+      background-color: #f1f1f1;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-left: 6px solid #3e4a3f;
+      border-radius: 6px;
+    }
+
+    .pricing-tier h4 {
+      margin: 0 0 10px;
+      color: #3e4a3f;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #3e4a3f;
+      color: white;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #2e372e;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="images/logo.jpg" alt="Mountain Roots Logo" class="site-logo" />
+    <h1>Mountain Roots Catering</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
         <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main class="section">
-    <h2>Booking & Payment</h2>
-    <p>To reserve your date, a retainer fee is required. This guarantees your event is secured in our calendar. Please use the secure Square checkout link below to complete payment.</p>
-    <a href="https://square.link/u/ABC123XYZ" target="_blank" class="payment-button">Pay Retainer with Square</a>
+
+  <main class="booking-container">
+    <h2>Book Your Private Chef Experience</h2>
+
+    <section class="booking-section">
+      <p>Chef David Breeden offers personalized dining experiences crafted to your taste and dietary preferences. Below is a breakdown of pricing tiers, meal structure, and what to expect when you book Mountain Roots Catering.</p>
+    </section>
+
+    <section class="booking-section">
+      <h3>Meal Structure</h3>
+      <ul>
+        <li><strong>Starter Course:</strong> Appetizer, soup, or salad</li>
+        <li><strong>Main Course:</strong> Protein + two sides</li>
+        <li><strong>Final Course:</strong> Dessert or finger foods</li>
+      </ul>
+    </section>
+
+    <section class="booking-section">
+      <h3>Pricing Tiers</h3>
+      <div class="pricing-tier">
+        <h4>$55 per person</h4>
+        <p>Mid-grade restaurant quality—chicken, pork, beef, and some seafood.</p>
+      </div>
+      <div class="pricing-tier">
+        <h4>$65–$75 per person</h4>
+        <p>Higher-end proteins like shrimp, veal, and lamb, with elegant plating.</p>
+      </div>
+      <div class="pricing-tier">
+        <h4>$85+ per person</h4>
+        <p>Fine dining with premium proteins like lobster, scallops, and filet mignon.</p>
+      </div>
+      <div class="pricing-tier">
+        <h4>$100+ per person</h4>
+        <p>Fully immersive culinary experience, wine pairings, exclusive dishes.</p>
+      </div>
+    </section>
+
+    <section class="booking-section">
+      <h3>Booking & Payment</h3>
+      <p>An $80 non-refundable retainer is required to secure your date. The final invoice will be sent 7 days before your event. A $50 travel fee applies to all bookings.</p>
+      <p style="text-align: center; margin-top: 20px;">
+        <a href="https://checkout.square.site/merchant/ML9W9QH1MSVYG/checkout/67QH7JGTUE6CCGPQMBFRCZ2J" class="cta-button" target="_blank">Pay $80 Retainer via Square</a>
+      </p>
+    </section>
   </main>
+
   <footer>
+    <p>Contact: <a href="mailto:davidbreeden87@gmail.com">davidbreeden87@gmail.com</a> | (828) 734-3968</p>
     <p>&copy; 2025 Mountain Roots Catering | All Rights Reserved</p>
   </footer>
 </body>
