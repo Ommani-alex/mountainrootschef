@@ -211,10 +211,18 @@
         </a>
         <figcaption>German chocolate cake</figcaption>
       </figure>
+    </div>
+  </main>
 
   <footer>
     <p>Contact: <a href="mailto:davidbreeden87@gmail.com">davidbreeden87@gmail.com</a> | (828) 734-3968</p>
-    <p>&copy; 2025 Mountain Roots Chef | All Rights Reserved</p>
+    <p>&copy; <span id="copyright-year">2025</span> Mountain Roots Chef | All Rights Reserved</p>
   </footer>
+
+  <script>
+    // Automatically keeps the year current (no manual edits each January)
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
