@@ -6,84 +6,267 @@
   <title>Gallery | Mountain Roots Chef</title>
   <link rel="stylesheet" href="style.css">
   <style>
-  .site-logo {
+    .site-logo {
       max-height: 60px;
       margin-right: 20px;
       border-radius: 8px;
     }
+
     .masonry-gallery {
       column-count: 3;
       column-gap: 1.5rem;
       padding: 0 1rem;
     }
 
+    /* Each gallery item */
+    .masonry-gallery figure {
+      position: relative;
+      margin: 0 0 1.5rem;
+      break-inside: avoid;
+      border-radius: 10px;
+    }
+
+    /* Make the image clickable/focusable without changing appearance */
+    .masonry-gallery .gallery-link {
+      display: block;
+      border-radius: 10px;
+      text-decoration: none;
+      outline: none;
+    }
+
+    .masonry-gallery .gallery-link:focus-visible {
+      outline: 3px solid #3e4a3f;
+      outline-offset: 4px;
+    }
+
     .masonry-gallery img {
       width: 100%;
       display: block;
-      margin-bottom: 1.5rem;
       border-radius: 10px;
-      break-inside: avoid;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* Caption overlay (shows on hover and keyboard focus) */
+    .masonry-gallery figcaption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.65rem 0.85rem;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.2;
+      border-radius: 0 0 10px 10px;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+
+    .masonry-gallery figure:hover figcaption,
+    .masonry-gallery figure:focus-within figcaption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     @media (max-width: 900px) {
-      .masonry-gallery {
-        column-count: 2;
-      }
+      .masonry-gallery { column-count: 2; }
     }
 
     @media (max-width: 600px) {
-      .masonry-gallery {
-        column-count: 1;
-      }
+      .masonry-gallery { column-count: 1; }
     }
   </style>
 </head>
 <body>
   <header>
-  <div class="logo-title">
-    <img src="images/logo.jpg" alt="Mountain Roots Logo" class="site-logo" />
-    <span class="site-name">Mountain Roots Chef</span>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="booking.html">Booking</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
+    <div class="logo-title">
+      <img src="images/logo.jpg" alt="Mountain Roots Logo" class="site-logo" />
+      <span class="site-name">Mountain Roots Chef</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main class="section">
     <h2 style="text-align:center;">Gallery</h2>
+
     <div class="masonry-gallery">
-      <img src="images/Appetizer.jpg" alt="Appetizer">
-      <img src="images/Stuffed.jpg" alt="Stuffed Shells">
-      <img src="images/Steak.jpg" alt="Steak Plate">
-      <img src="images/Apps.jpg" alt="Multiple Courses">
-      <img src="images/bar.jpg" alt="Chocolate Bars">
-      <img src="images/cake.jpg" alt="Carrot Cake">
-      <img src="images/strawberries.jpg" alt="Chocolate Strawberries">
-      <img src="images/scallops.jpg" alt="Seared Scallops">
-      <img src="images/Cheese Board.jpg" alt="Charcuterie Board">
-      <img src="images/Falafel.jpg" alt="Falafel Plate">
-      <img src="images/seafood-pasta.jpg" alt="Seafood Plate">
-      <img src="images/beet-bites.jpg" alt="Beet Bites">
-      <img src="images/Appetizer2.jpg" alt="Appetizer">
-      <img src="images/Pork.jpg" alt="Dinner Plate">
-      <img src="images/Cakepops.jpg" alt="Cake pops">
-      <img src="images/Smores-cake.jpg" alt="Smores Cake">
-      <img src="images/Strawberry-Crunch-Cake.jpg" alt="Strawberry Crunch Cake">
-      <img src="images/Bars.jpg" alt="Dubai Chocolate Cakes and Bars">
-      <img src="images/Filet with asparagus risotto.jpg" alt="Filet with asparagus risotto">
-      <img src="images/Meatloaf mashed potatoes.jpg" alt="Meatloaf mashed potatoes">
-      <img src="images/Shrimp with okra sauce.jpg" alt="Shrimp with okra sauce">
-      <img src="images/Chef with steak plates.jpg" alt="Chef with steak plates">
-      <img src="images/German chocolate cake.jpg" alt="German chocolate cake">
-      <img src="images/Matcha coconut chocolates.jpg" alt="Matcha coconut chocolates">
+      <figure>
+        <a class="gallery-link" href="images/Appetizer.jpg" aria-label="View larger image: Appetizer">
+          <img src="images/Appetizer.jpg" alt="Appetizer">
+        </a>
+        <figcaption>Appetizer</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Stuffed.jpg" aria-label="View larger image: Stuffed Shells">
+          <img src="images/Stuffed.jpg" alt="Stuffed Shells">
+        </a>
+        <figcaption>Stuffed Shells</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Steak.jpg" aria-label="View larger image: Steak Plate">
+          <img src="images/Steak.jpg" alt="Steak Plate">
+        </a>
+        <figcaption>Steak Plate</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Apps.jpg" aria-label="View larger image: Multiple Courses">
+          <img src="images/Apps.jpg" alt="Multiple Courses">
+        </a>
+        <figcaption>Multiple Courses</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/bar.jpg" aria-label="View larger image: Chocolate Bars">
+          <img src="images/bar.jpg" alt="Chocolate Bars">
+        </a>
+        <figcaption>Chocolate Bars</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/cake.jpg" aria-label="View larger image: Carrot Cake">
+          <img src="images/cake.jpg" alt="Carrot Cake">
+        </a>
+        <figcaption>Carrot Cake</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/strawberries.jpg" aria-label="View larger image: Chocolate Strawberries">
+          <img src="images/strawberries.jpg" alt="Chocolate Strawberries">
+        </a>
+        <figcaption>Chocolate Strawberries</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/scallops.jpg" aria-label="View larger image: Seared Scallops">
+          <img src="images/scallops.jpg" alt="Seared Scallops">
+        </a>
+        <figcaption>Seared Scallops</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Cheese Board.jpg" aria-label="View larger image: Charcuterie Board">
+          <img src="images/Cheese Board.jpg" alt="Charcuterie Board">
+        </a>
+        <figcaption>Charcuterie Board</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Falafel.jpg" aria-label="View larger image: Falafel Plate">
+          <img src="images/Falafel.jpg" alt="Falafel Plate">
+        </a>
+        <figcaption>Falafel Plate</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/seafood-pasta.jpg" aria-label="View larger image: Seafood Plate">
+          <img src="images/seafood-pasta.jpg" alt="Seafood Plate">
+        </a>
+        <figcaption>Seafood Plate</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/beet-bites.jpg" aria-label="View larger image: Beet Bites">
+          <img src="images/beet-bites.jpg" alt="Beet Bites">
+        </a>
+        <figcaption>Beet Bites</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Appetizer2.jpg" aria-label="View larger image: Appetizer">
+          <img src="images/Appetizer2.jpg" alt="Appetizer">
+        </a>
+        <figcaption>Appetizer</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Pork.jpg" aria-label="View larger image: Dinner Plate">
+          <img src="images/Pork.jpg" alt="Dinner Plate">
+        </a>
+        <figcaption>Dinner Plate</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Cakepops.jpg" aria-label="View larger image: Cake pops">
+          <img src="images/Cakepops.jpg" alt="Cake pops">
+        </a>
+        <figcaption>Cake pops</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Smores-cake.jpg" aria-label="View larger image: Smores Cake">
+          <img src="images/Smores-cake.jpg" alt="Smores Cake">
+        </a>
+        <figcaption>Smores Cake</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Strawberry-Crunch-Cake.jpg" aria-label="View larger image: Strawberry Crunch Cake">
+          <img src="images/Strawberry-Crunch-Cake.jpg" alt="Strawberry Crunch Cake">
+        </a>
+        <figcaption>Strawberry Crunch Cake</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Bars.jpg" aria-label="View larger image: Dubai Chocolate Cakes and Bars">
+          <img src="images/Bars.jpg" alt="Dubai Chocolate Cakes and Bars">
+        </a>
+        <figcaption>Dubai Chocolate Cakes and Bars</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Filet with asparagus risotto.jpg" aria-label="View larger image: Filet with asparagus risotto">
+          <img src="images/Filet with asparagus risotto.jpg" alt="Filet with asparagus risotto">
+        </a>
+        <figcaption>Filet with asparagus risotto</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Meatloaf mashed potatoes.jpg" aria-label="View larger image: Meatloaf mashed potatoes">
+          <img src="images/Meatloaf mashed potatoes.jpg" alt="Meatloaf mashed potatoes">
+        </a>
+        <figcaption>Meatloaf mashed potatoes</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Shrimp with okra sauce.jpg" aria-label="View larger image: Shrimp with okra sauce">
+          <img src="images/Shrimp with okra sauce.jpg" alt="Shrimp with okra sauce">
+        </a>
+        <figcaption>Shrimp with okra sauce</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Chef with steak plates.jpg" aria-label="View larger image: Chef with steak plates">
+          <img src="images/Chef with steak plates.jpg" alt="Chef with steak plates">
+        </a>
+        <figcaption>Chef with steak plates</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/German chocolate cake.jpg" aria-label="View larger image: German chocolate cake">
+          <img src="images/German chocolate cake.jpg" alt="German chocolate cake">
+        </a>
+        <figcaption>German chocolate cake</figcaption>
+      </figure>
+
+      <figure>
+        <a class="gallery-link" href="images/Matcha coconut chocolates.jpg" aria-label="View larger image: Matcha coconut chocolates">
+          <img src="images/Matcha coconut chocolates.jpg" alt="Matcha coconut chocolates">
+        </a>
+        <figcaption>Matcha coconut chocolates</figcaption>
+      </figure>
     </div>
   </main>
 
